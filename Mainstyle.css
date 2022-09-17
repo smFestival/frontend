@@ -1,0 +1,174 @@
+/* 윗부분 */
+.top{
+    color: white;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.building{
+    height: 310px;
+    background: rgb(114, 113, 113);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 6.5%;
+}
+
+.잔디{
+    height: 310px;
+    background: rgb(156, 234, 156);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 43%;
+}
+
+.street_block,.street_block2{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 18%;
+
+    height: 310px;
+    background: rgb(217, 216, 216);
+}
+.booth{
+    width: 30px;
+    height: 30px;
+    background: rgb(96, 149, 240);
+}
+.empty{
+    width: 30px;
+    height: 30px;
+}
+
+.part_L,.part_R,.part2_L,.part2_R{
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 중간부분 */
+.middle{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 110px;
+    background: rgb(217, 216, 216);
+}
+.booth3{
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    background: rgb(96, 149, 240);
+}
+.big_booth{
+    width: 190px;
+    height: 30px;
+    margin-top: 20px;
+    background: rgb(96, 149, 240);
+}
+
+.m_part1,.m_part3{
+    color: white;
+    font-size: 26px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    flex-basis: 30%;
+}
+.m_part1{
+    transform: translate(8%, 0%);
+}
+.m_part3{
+    transform: translate(-8%, 0%);
+}
+
+.m_part2{
+    color: white;
+    font-size: 26px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-basis: 40%;
+}
+
+/* 아랫부분 */
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-size: 20px;
+    height: 240px;
+}
+.booth4{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    background: rgb(96, 149, 240);
+}
+
+.b_part1{
+    display: flex;
+    flex-basis: 30%;
+    justify-content: end;
+}
+.street_block3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    flex-basis: 65%;
+    position: relative;
+    background: rgb(217, 216, 216);
+}
+
+.b_part2{
+    display: flex;
+    flex-basis: 36%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.b_part2 div3:first-child{
+    background: rgb(114, 113, 113);
+    flex-basis: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.b_part2 div3:last-child{
+    background: rgb(156, 234, 156);
+    flex-basis: 62%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.b_part3{
+    display: flex;
+    flex-basis: 30%;
+    justify-content: end;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.b_part3 div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    background: rgb(114, 113, 113);
+}
