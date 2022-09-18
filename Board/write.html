@@ -1,0 +1,90 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script type="text/javascript" src="js/write.js"></script>
+    <style>
+        #input1{
+            width:100px;
+            height: 40px;
+            border-top: none;
+            border-left: none;
+            border-right:none;
+            border-bottom: 0px solid black
+
+        }
+    </style>
+    <script >
+        var title1 = document.getElementById("title");
+        var write1 = document.getElementById("write");
+        var number1 = document.getElementById("number");
+        var contents1 = document.getElementById("contents");
+        var input1=document.getElementById("input1");
+
+        $('#input1').click( function() {
+
+            if (title1.value==""||write1.value==""||number1.value==""||contents1.value=="") {
+                alert("입력이 되지 않은 사항이 있습니다.");
+            }
+        });
+
+    </script>
+</head>
+<body>
+<form method="post" action="js/writeation.js">
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>선문대 축제</strong>
+            <p>세상에서 가장 멋진 축제!</p>
+        </div>
+        <div class="board_write_wrap">
+            <div class="board_write">
+                <div class="title">
+                    <dl>
+                        <dt>제목</dt>
+                        <dd><input type="text" placeholder="제목을 입력해주세요!" id="title"  value="" ></dd>
+                    </dl>
+                </div>
+                <div class="info">
+                    <dl>
+                        <dt>글쓴이</dt>
+                        <dd><input type="text" placeholder="글쓴이 입력" id="writer"></dd>
+                    </dl>
+                         <dl>
+                        <dt>비밀번호</dt>
+                        <dd><input type="text" placeholder="비밀번호를 입력해주세요!" id="number" maxlength="4"></dd>
+                    </dl>
+                </div>
+                <div class="cont">
+                    <textarea placeholder="내용을 입력해주세요!" name="contents" maxlength="5000" id="contents"></textarea>
+                </div>
+            </div>
+            <div class="bt_wrap">
+                <input type="submit" id="input1" value="등록" >
+                
+                <div class>
+
+                    <!--  등록 버튼을 눌렀을 때
+                        해당 신호를 받을 경우 서버에 보내서
+                        들어가도록 해야함
+                        이 들어간 것을
+                        보여주는 루틴으로 진행
+
+                        
+                    -->
+
+                </div>
+
+                <a href="list.html" class="on">취소</a>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
