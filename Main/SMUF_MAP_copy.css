@@ -1,0 +1,128 @@
+.map {
+    background-color:azure;
+}
+
+.header {
+    background-color:#01004d;
+    border: 1px solid red;
+    color:aliceblue;
+    text-align:center;
+}
+
+#parking {
+    display:none;
+}
+
+#glass {
+    display:none;
+}
+
+input[id="glass"] + label {
+    display:inline-block;
+    background-color:greenyellow;
+    line-height:250%;
+    text-align:center;
+    border-radius:5px;
+    margin:8% 25% 6% 20%;
+    width:60%;
+    height:100%;
+    position:relative;
+    cursor:pointer;
+}
+
+input[id="glass"] + label:checked {
+    z-index:2;
+}
+
+input[id="glass"]:checked + label + div {
+    left:0;
+}
+
+input[id="parking"] + label:checked {
+    z-index:2;
+}
+
+input[id="parking"]:checked + label + div {
+    left:0;
+}
+
+div[class="glass_information"] {
+    width:100%;
+    margin:50% 0 0 0;
+    height:100%;
+    background-color:coral;
+    position:fixed;
+    top:0;
+    left:100%;
+    z-index:1;
+    transition:all .35s;
+}
+
+.t {
+    margin: 3% 3% 3% 3%;
+    background-color:antiquewhite;
+    width:90%;
+    border-radius:5px;
+}
+
+input[id="parking"] + label {
+    display:inline-block;
+    background-color:#808080;
+    line-height:250%;
+    text-align:center;
+    border-radius:5px;
+    margin:6% 10% 8% 10%;
+    width:80%;
+    height:80%;
+    position:relative;
+    cursor:pointer;
+}
+
+div[class="parking_information"] {
+    width:100%;
+    margin:50% 0 0 0;
+    height:100%;
+    background-color:skyblue;
+    position:fixed;
+    top:0;
+    left:100%;
+    z-index:1;
+    transition:all .35s;
+}
+
+.icon {
+    margin: 2% 2% 2% 2%;
+    display:inline-block;
+    background-color:azure;
+    border-radius:15%;
+    width:5%;
+    height:5%;
+    text-align:center;
+    border:1px solid black;
+}
+
+.icon_name {
+    display:inline-block;
+    width:50%;
+    border-radius:5px;
+    border:1px solid #808080;
+    background-color:gainsboro;
+    text-align:center;
+}
+
+.icon_information {
+    display:inline-block;
+    width:90%;
+    margin: 2% 0 3% 5%;
+    height:30%;
+    justify-content:center;
+    background-color:cornsilk;
+    border-radius:5px;
+    border:1px solid #808080;
+    text-align:center;
+}
+
+.line {
+    background-color:black;
+    height:2px;
+}
