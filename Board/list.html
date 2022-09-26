@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
     <link rel="stylesheet" href="css/css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+<form name=f action="#">
     <div class="board_wrap">
         <div class="board_title">
             <strong>선문대 축제</strong>
@@ -23,20 +26,11 @@
                     <div class="date">조회</div>
                 </div>
                 <div>
-                    <div class="num">5</div>
+                    <div class="num">0</div>
                     <div class="title"><a href="view2.html">공지사항 입니다!</a></div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2022.9.17</div>
-                    <div class="count">33</div>
-            </div>
-                <div>
-                    <div class="num">  <%=list.get(i).getBbsID() %> </div>
-                    <div><a class="title" href="view.jsp?bbsID=<%=list.get(i).getBbsID()%>"><%=list.get(i).getBbsTitle() %></a> </div>
-                    <div class="writer" ><%=list.get(i).getUserID() %> </div>
-                    <div class="date" > <%=list.get(i).getBbsDate().substring(0,11) + list.get(i).getBbsDate().substring(11, 13) + "시"+ list.get(i).getBbsDate().substring(14,16) + "분" %> </div>
-                    <div class="count">33</div>
-                </div>
-  <div>
+                    <div class="writer">관리자</div>
+                    <div class="date">2022.10.5</div>
+                    <div class="count">x</div>
             </div>
             <div class="board_page">
                 <a href="#" class="bt first"><<</a>
@@ -49,6 +43,54 @@
         </div>
     </div>
    </div>
+    </form>
 </body>
+<script>
+
+    var writer2;
+    var  title2;
+    var num;
+    var time;
+    var view1;
+    var page=0;
+    var number;
+    var like1;
+    <div></div>
+    $.ajax({
+            type:"get",
+            url:"site.smfestival.site/post/",
+            success: function(data){
+                console.log(data);
+                while (10>page) {
+                    data[page].author=writer2;
+                    data[page].createdTime=time;
+                    data[page].id=num;
+                    data[page].like=like1;
+                    data[page].title=title2;
+                    data[page].views=view1;
+                        page++;
+                    document.write("<div>");
+                    document.write("<div>"+num+"</div>");
+                    document.write("<div>"+title2+"</div>");
+                    document.write("<div>"+writer2+"</div>");
+                    document.write("<div>"+time+"</div>");
+                    document.write("<div>"+view1+"</div>");
+                    document.write("</div>");
+                }
+            },
+            error:function(){
+                console.log("통신에러");
+            }
+        })
+
+
+
+
+
+
+
+
+
+</script>
 </html>
 

@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
     <link rel="stylesheet" href="css/css.css">
+    <style>
+        #input1{
+            width:100px;
+            height: 40px;
+            border-top: none;
+            border-left: none;
+            border-right:none;
+            border-bottom: 0px solid black
+
+        }
+    </style>
 </head>
 <body>
+<form name=f>
     <div class="board_wrap">
         <div class="board_title">
             <strong>선문대 축제</strong>
@@ -17,30 +29,61 @@
                 <div class="title">
                     <dl>
                         <dt>제목</dt>
-                        <dd><input type="text" placeholder="제목을 입력해주세요!" value=""></dd>
+                        <dd><input type="text" placeholder="제목을 입력해주세요!"  id="title"></dd>
                     </dl>
                 </div>
                 <div class="info">
                     <dl>
                         <dt>글쓴이</dt>
-                        <dd><input type="text" placeholder="글쓴이 입력" value=""></dd>
+                        <dd><input type="text" placeholder="글쓴이 입력" id="writer" ></dd>
                     </dl>
                          <dl>
                         <dt>비밀번호</dt>
-                        <dd><input type="text" placeholder="비밀번호를 입력해주세요!" value=""></dd>
+                             <dd><input type="text" placeholder="비밀번호를 입력해주세요!" id="number" name="number" maxlength="4"value="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" ></dd>
                     </dl>
                 </div>
                 <div class="cont">
-                    <textarea placeholder="내용을 입력해주세요!">
-</textarea>
+                     <textarea placeholder="내용을 입력해주세요!" id="contents"></textarea>
                 </div>
             </div>
             <div class="bt_wrap">
-                <a href="view.html" class="on">수정</a>
+                <input type="submit" id="input1" value="등록" name="sub" >
                 <a href="list.html">취소</a>
                 <a href="view.html" class="on">추천</a>
             </div>
         </div>
     </div>
+</form>
 </body>
+<script>
+
+    var writer1 =document.f.writer.value;
+    var number1 = document.f.number.value;
+    var  title1 =document.f.title.value;
+    var  contents1 =document.f.contents.value;
+
+    document.getElementById("input1").onclick = function() {sub1()};
+
+    function sub1() {
+
+        $.ajax({
+            url: "/drink/0",
+            method: "PATCH",
+            dataType: "application/json",
+            data:{
+                author: "writer1",
+                description: "contents1",
+                pw: "number1",
+                title: "title1"
+            },
+            success: function (data) {
+                console.log(data)
+            }
+        });
+
+    }
+
+
+
+</script>
 </html>

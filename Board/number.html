@@ -28,4 +28,17 @@
         </div>
     </div>
 </body>
+<script>
+
+    $.ajax({
+        url: "/drink/0",
+        method: "DELETE",
+        dataType: "text",
+        success: function (data) {
+            $('#output').val(data)
+            console.log(data)
+        }
+    })
+
+</script>
 </html>

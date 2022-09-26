@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항</title>
-    <link rel="stylesheet" href="css\css.css">
+    <link rel="stylesheet" href="css/css.css">
 </head>
 <body>
     <div class="board_wrap">
@@ -41,8 +41,28 @@
             <div class="bt_wrap">
                 <a href="list.html" class="on">목록</a>
                <a href="" class="on">추천</a>
+                <a href="number.html" class="on">삭제</a>
             </div>
         </div>
     </div>
 </body>
+<script>
+    $.ajax({
+        type:"get",
+        url:"site.smfestival.site/post/",
+        success: function(data){
+            console.log(data);
+                data[page].author=writer2;
+                data[page].createdTime=time;
+                data[page].id=num;
+                data[page].like=like1;
+                data[page].title=title2;
+                data[page].views=view1;  // ID 값 받는것
+
+        },
+        error:function(){
+            console.log("통신에러");
+        }
+    })
+</script>
 </html>
