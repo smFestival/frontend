@@ -1,50 +1,45 @@
 const likeBtn = document.querySelector(".like_btn");
-let likeIcon = document.querySelector("#icon"),
-  count = document.querySelector("#count");
-
-let clicked = false;
+let count = document.querySelector("#count"), clicked = false;//clicked - 중복 체크 방지
 
 likeBtn.addEventListener("click", () => {
-  if (!clicked) {
-    clicked = true;
-    likeIcon.innerHTML = `<i class="fas fa-thumbs-up"></i>`;
-    count.textContent++;
-    console.log('O');
-    
-  } else {
-    clicked = false;
-    likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
-    count.textContent--;
-    console.log('X');
-  }
+    if (!clicked) {
+        count.textContent++, clicked = true;
+        like_req_get(20004);
+        like_req_add(20004);
+    } else {
+        count.textContent--, clicked = false;
+        like_req_get(20004);
+        like_req_null(20004);
+    }
 });
 
-
-var doubleSubmitFlag = false;
-function doubleSubmitCheck(){
-  if(doubleSubmitFlag){
-    return doubleSubmitFlag;
-  }else{
-    doubleSubmitFlag = true;
-    return false;
-  }
-}
-function test_1(){
-  if(doubleSubmitCheck()) return;
-  console.log("등록");
+let id = 0, url = "http://server.smfestival.site"
+function like_req_get(id) {//id, like 확인
+    const config = { method: 'GET' };
+    fetch(url + '/post/' + id, config)
+        .then((response) => response.json())
+        .then((data) => console.log('id:', data.id, 'like:', data.like))
+        .catch((error) => console.log(error));
 }
 
+function like_req_add(id) {//like +1
+    const data = { "check": 1 };
+    fetch(url + '/post/' + id + '/like', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', },
+        body: JSON.stringify(data),
+    })
+        .then((response) => response.json())
+        .then((data) => { console.log('결과:', data); });
+}
 
-/*
-$.ajax({
-  type: "post",
-  url: "http://server.smfestival.site/swagger-ui/index.html#/post-controller/editPostUsingPATCH",
-  dataType: "json",
-  contentType : "application/json",
-  data: JSON.stringify({
-    check:0,
-    id:1
-  }),
-  success: function(){}
-})
- */
+function like_req_null(id) {//like 취소
+    const data = { "check": null };
+    fetch(url + '/post/' + id + '/like', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', },
+        body: JSON.stringify(data),
+    })
+        .then((response) => response.json())
+        .then((data) => { console.log('결과:', data); });
+}
