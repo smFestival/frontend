@@ -1,0 +1,283 @@
+
+.main{
+    font-size: x-large;
+    text-align: center;
+    text-shadow: 2px 1px darkblue;
+    background-color: lemonchiffon;
+    height: 100px;
+}
+.welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+    opacity: 0;
+    transition: all 1s;
+}
+.main:hover+.welcome{opacity: 1;}
+
+/* 윗부분 */
+.top{
+    color: white;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.building{
+    height: 310px;
+    background: rgb(114, 113, 113);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 6.5%;
+    border-radius: 15px;
+    transition: all ease 0.6s;
+}
+
+.잔디{
+    height: 310px;
+    background: rgb(156, 234, 156);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 43%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px gray;
+    transition: all ease 0.6s;  
+}
+
+.street_block,.street_block2{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 18%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px gray;
+
+    height: 310px;
+    background: rgb(217, 216, 216);
+}
+.booth{
+    width: 30px;
+    height: 30px;
+    background: rgb(96, 149, 240);
+    border-radius: 15px;
+    transition: all ease 0.3s;
+}
+.empty{
+    width: 30px;
+    height: 30px;
+}
+
+.part_L,.part_R,.part2_L,.part2_R{
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 중간부분 */
+.middle{
+    display: flex;
+    margin: 0px 20px 0px 20px;
+    height: 110px;
+    border-radius: 15px;
+    background: rgb(217, 216, 216);
+}
+.booth3{
+    width: 20%;
+    height: 30px;
+    margin: 20px;
+    background: rgb(96, 149, 240);
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+.big_booth{
+    /* flex-basis: 30%; (와이드나 이거나 똑같지만 모바일 에서 구현된 것 보고 택)*/
+    width: 35%;
+    height: 30px;
+    margin-top: 20px;
+    background: rgb(96, 149, 240);
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+
+.m_part1,.m_part3{
+    color: white;
+    font-size: 26px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    flex-basis: 30%;
+}
+.m_part1{
+    transform: translate(8%, 0%);
+}
+.m_part3{
+    transform: translate(-8%, 0%);
+}
+
+.m_part2{
+    color: white;
+    font-size: 26px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-basis: 40%;
+}
+
+/* 아랫부분 */
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-size: 20px;
+    height: 240px;
+}
+.booth4{
+    margin: 10px;
+    width: 13.5%;
+    height: 40px;
+    background: rgb(96, 149, 240);
+    border-radius: 15px;
+    transition: all ease 0.3s;
+}
+
+.b_part1{
+    display: flex;
+    flex-basis: 30%;
+    justify-content: end;
+}
+.street_block3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    flex-basis: 65%;
+    position: relative;
+    border-radius: 0px 0px 15px 15px;
+    background: rgb(217, 216, 216);
+}
+
+.b_part2{
+    display: flex;
+    flex-basis: 36%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#bp2ch1{
+    background: rgb(114, 113, 113);
+    flex-basis: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all ease 0.6s;
+}
+#bp2ch2{
+    background: rgb(156, 234, 156);
+    flex-basis: 62%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px gray;
+    transition: all ease 0.6s;
+}
+
+.b_part3{
+    display: flex;
+    flex-basis: 29%;
+    justify-content: end;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.b_part3 div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    border-radius: 15px;
+    background: rgb(114, 113, 113);
+}
+
+/* 특수 */
+#moveT{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.container{
+    background-color: rgb(247, 237, 224);
+    margin-bottom: 20px;
+}
+
+.자연관{
+    height: 800px;
+    background-color: rgb(170, 245, 220);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+}
+.자연관서브{
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    /* background-color: rgb(246, 186, 186); */
+    background: linear-gradient(to bottom, rgb(195, 195, 109) 35%, rgb(203, 125, 125) 70%, powderblue);
+}
+.자연관서브>div, .자연관서브2>div{
+    width: 22%;
+    border-style: double;
+}
+.자연관서브2{
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: rgb(252, 176, 214); */
+    background: linear-gradient(to right, rgb(95, 135, 95) 20%, rgb(125, 70, 70) 70%, powderblue);
+}
+
+.인문관{
+    height: 800px;
+    background-color:tan;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.인문관>div{
+    height: 17%;
+    border-style: solid;
+}
+
+.공연장{
+    height: 800px;
+    background-color: cornsilk;
+}
+.주차장{
+    height: 800px;
+    background-color: rgb(246, 246, 186);
+}
+
+/* 커서 올리면 크기 조정하는 이벤트 */
+.building:hover, #bp2ch1:hover, #bp2ch2:hover, .b_part3 div3:hover{
+    transform: scale(1.1);
+}
+.booth:hover, .booth3:hover, .booth4:hover, .big_booth:hover{
+    transform: scale(1.5);
+}

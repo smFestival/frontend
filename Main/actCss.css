@@ -1,0 +1,35 @@
+.nav-link{
+    background-color: beige;
+}
+
+.col-sm-2, .col-sm-2 *{
+    background-color: rgb(223, 222, 222);
+}
+.col-sm-2{
+    width: 15%;
+    margin-right: 1%;
+}
+.col-sm-10{
+    width: 83%;
+    margin-left: 1%;
+    background-color: rgb(244, 232, 255);
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav{
+    margin-bottom: 1%;
+}
+.nav-item{
+    border: solid 3px gray;
+    border-radius: 10%;
+}
+.nav-link:hover{
+    background-color:rgb(255, 200, 200);
+}
+.container-fluid{
+    background-color: rgb(218, 246, 255);
+}
