@@ -268,10 +268,111 @@
 .공연장{
     height: 800px;
     background-color: cornsilk;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align:center;
 }
+
+.공연장>div {
+    margin:auto;
+    height : 90%;
+    width : 30%;    
+    border-style : solid;
+    background-color:bisque;
+    border-radius:10px;
+}
+
+.공연장>div>span {
+    font-size : 20px;
+    display:inline-block;
+}
+
+.공연장>div>div {
+    border-radius:5px;
+    display:flex;
+    background-color:azure;
+    margin: 5% 5% 5% 5%;
+    height : 20%;
+    width : 90%;
+    border-style: solid;
+    align-items:center;
+    justify-content:center;
+}
+
+.공연장>div>div>div {
+    height:80%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:auto;
+    padding:0% 2% 0% 2%;
+    position:relative;
+    background-color:aliceblue;
+    border-radius: 5px;
+    border-style: solid;
+    justify-content:center;
+}
+
+.공연장>div>div>div span {
+    display:inline-block;
+    margin:auto;
+}
+
+.공연장>div>div>div img {
+    max-width:80px;
+    max-height:80px;
+    background-color:white;
+    margin:auto;
+    display:inline-block;
+    border-radius:5px;
+    border:1px solid black;
+}
+
+#info {
+    width: 60%;
+    background-color:white;
+    margin:auto;
+}
+
 .주차장{
-    height: 800px;
+    height:800px;
     background-color: rgb(246, 246, 186);
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.booth_info {
+    height:15%;
+    width:90%;
+    background-color:azure;
+    border-radius:10px;
+    border-style:solid;
+    display:flex;
+    text-align:center;
+}
+
+.booth_info>div {
+    height:80%;
+    width:8%;
+    background-color:blanchedalmond;
+    border-style:solid;
+    border-radius:5px;
+    display:inline-block;
+    margin:auto;
+}   
+
+#info2 {
+    height:80%;
+    width:88%;
+    margin:auto;
+    border-style:solid;
+    border-radius:5px;
+    display:inline-block;
+    background-color:white;
 }
 
 /* 커서 올리면 크기 조정하는 이벤트 */
